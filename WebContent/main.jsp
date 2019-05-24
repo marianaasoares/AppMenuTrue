@@ -5,7 +5,7 @@
 <head>
 	<meta charset="ISO-8859-1">
 	
-	<title>AppMariana</title>
+	<title>Menu Main</title>
 	
 	<style>
 		input[type = submit] {
@@ -19,22 +19,22 @@
 	<form action="AppController" method="post">
 	
 		<div style="height: 75px;">
-			<h3>Cadastramento de Estudantes</h3>
-				<input type="submit" name="tela" value="Estudante">
+			<h3>Massa</h3>
+				<input type="submit" name="tela" value="Massa">
 		</div>
 		
 		<div style="height: 75px;">		
-			<h3>Cadastramento de Professores</h3>
-				<input type="submit" name="tela" value="Professor">
+			<h3>Sobremesa</h3>
+				<input type="submit" name="tela" value="Sobremesa">
 		</div>
 		
 		<div style="height: 75px;">
-			<h3>Cadastramento de Coordenadores</h3>
-				<input type="submit" name="tela" value="Coordenador">
+			<h3>Saudaveis</h3>
+				<input type="submit" name="tela" value="Saudaveis">
 		</div>
 		<div style="height: 75px;">
-			<h3>Cadastramento de Diretores</h3>
-				<input type="submit" name="tela" value="Diretor">
+			<h3>Chef</h3>
+				<input type="submit" name="tela" value="Chef">
 		</div>
 	</form>
 </body>

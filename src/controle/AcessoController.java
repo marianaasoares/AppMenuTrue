@@ -27,7 +27,7 @@ public class AcessoController extends HttpServlet {
 		
 		
 		if(UsuarioDao.validar(usuario)) {
-			request.getRequestDispatcher("main.html").forward(request, response);
+			request.getRequestDispatcher("main.jsp").forward(request, response);
 		}else {
 			request.setAttribute("invalido", true);
 			request.getRequestDispatcher("login.jsp").forward(request, response);

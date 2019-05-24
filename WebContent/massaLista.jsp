@@ -1,36 +1,41 @@
+<%@page import="negocio.Massa"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title> MASSA </title>
 </head>
 <body>
+	<%
+	List<Massa> lista = (List <Massa>)request.getAttribute("lista");
+	%>
+	<form action="AppController" method="get">
 		<div style="height: 75px;">
-				<h3>MASSAS</h3>
+				<h3>Detalhes de Massa</h3>
+				<input type="hidden" name="tela" value="Massa">
+				<input type="submit" value="Cadastrar">
 		</div>
-	<form action="">
-	<div class="container">            
+		<div class="container">            
 	  <table class="table">
 	    <thead>
 	      <tr>
-	        <th>Nome</th>
-	        <th>Universidade</th>
+	        <th>Tipo</th>
+	        <th>Massa Fresca</th>
 	      </tr>
 	    </thead>
 	    <tbody>
-
+	    <% for(Massa item : lista){ %>
 	      <tr>
-	        <td>Nome</td>
-	        <td>Universidade</td>
+	        <td><%=item.getTipo()%></td>
+	        <td><%=item.getMassaFresca()%></td>
 	      </tr>
+	      <%} %>
 	    </tbody>
 	  </table>
 	</div>
 	</form>
-	<input type="submit" name="" value="novo">
-				
-	<input type="submit" value="voltar">
 </body>
 </html>

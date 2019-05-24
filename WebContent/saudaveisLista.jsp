@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title> Cadastro de Estudante</title>
+<title> Saudaveis </title>
 </head>
 <body>
 	<%
@@ -15,8 +15,8 @@
 	%>
 	<form action="AppController" method="get">
 		<div style="height: 75px;">
-				<h3>Detalhes do cadastramento de estudantes</h3>
-				<input type="hidden" name="tela" value="Estudante">
+				<h3>Saudaveis</h3>
+				<input type="hidden" name="tela" value="Saudaveis">
 				<input type="submit" value="Cadastrar">
 		</div>
 		<div class="container">            

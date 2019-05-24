@@ -16,8 +16,8 @@
 	%>
 	<form action="AppController" method="get">
 		<div style="height: 75px;">
-				<h3>Detalhes do cadastramento de estudantes</h3>
-				<input type="hidden" name="tela" value="Coordenador">
+				<h3>Chef</h3>
+				<input type="hidden" name="tela" value="Chef">
 				
 				<input type="submit" value="Cadastrar">
 		</div>
