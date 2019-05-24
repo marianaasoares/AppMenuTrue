@@ -24,7 +24,7 @@ public class AppController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		tela = request.getParameter("tela").toLowerCase()+"Detalhe.html";
+		tela = request.getParameter("tela").toLowerCase()+"Detalhe.jsp";
 		
 		request.getRequestDispatcher(tela).forward(request, response);
 	}

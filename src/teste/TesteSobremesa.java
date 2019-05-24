@@ -1,5 +1,6 @@
 package teste;
 
+import dao.SobremesaDao;
 import negocio.Sobremesa;
 
 public class TesteSobremesa {
@@ -10,6 +11,13 @@ public class TesteSobremesa {
 		sobremesa.setTemChocolate(false);
 		sobremesa.setGelado(true);
 		sobremesa.setQtdeServe(15);
+		
+		SobremesaDao.incluir(sobremesa);
+		
 		sobremesa.show();
+		
+		for (Sobremesa s : SobremesaDao.obterLista()) {
+			s.show();
+		}	
 	}
 }

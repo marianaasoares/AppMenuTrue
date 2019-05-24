@@ -7,6 +7,9 @@ public class Chef {
 	private String usuario;
 	private boolean amador;
 	
+	public Chef() {
+		
+	}
 	
 	public Chef(String nome, String email, String usuario, boolean amador) {
 		this.nome = nome;

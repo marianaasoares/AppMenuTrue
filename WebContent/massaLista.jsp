@@ -9,9 +9,6 @@
 <title> MASSA </title>
 </head>
 <body>
-	<%
-	List<Massa> lista = (List <Massa>)request.getAttribute("lista");
-	%>
 	<form action="AppController" method="get">
 		<div style="height: 75px;">
 				<h3>Detalhes de Massa</h3>
@@ -27,12 +24,10 @@
 	      </tr>
 	    </thead>
 	    <tbody>
-	    <% for(Massa item : lista){ %>
 	      <tr>
-	        <td><%=item.getTipo()%></td>
-	        <td><%=item.getMassaFresca()%></td>
+	        <td>Nome</td>
+	        <td>Universidade</td>
 	      </tr>
-	      <%} %>
 	    </tbody>
 	  </table>
 	</div>

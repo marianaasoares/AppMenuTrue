@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="../WebContent/style.css" rel="stylesheet" type="text/css">
 	<meta charset="ISO-8859-1">
 	
 	<title>Menu Main</title>
@@ -12,10 +14,14 @@
 		     width: 150px;
 		     height: 30px;
 		}
+		
 	</style>
 </head>
 <body>
-	
+	<style>
+		
+	  
+	</style>
 	<form action="AppController" method="post">
 	
 		<div style="height: 75px;">

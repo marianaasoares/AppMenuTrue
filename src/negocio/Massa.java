@@ -7,8 +7,8 @@ public class Massa extends Segmento{
 	private String tipo;
 	private boolean massaFresca;
 	private int qtdeMassa;
-		
-
+	
+	
 	@Override
 	public String toString() {
 	
@@ -19,6 +19,7 @@ public class Massa extends Segmento{
 				this.qtdeMassa
 				);
 	}
+	
 	
 	public Massa(String nomeReceita, int tempoMinutos) {
 		super(nomeReceita, tempoMinutos);

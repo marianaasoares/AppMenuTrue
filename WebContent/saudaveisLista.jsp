@@ -10,9 +10,6 @@
 <title> Saudaveis </title>
 </head>
 <body>
-	<%
-	List<Saudaveis> lista = (List<Saudaveis>)request.getAttribute("lista");
-	%>
 	<form action="AppController" method="get">
 		<div style="height: 75px;">
 				<h3>Saudaveis</h3>
@@ -28,12 +25,10 @@
 	      </tr>
 	    </thead>
 	    <tbody>
-	    <% for(Saudaveis item : lista){ %>
 	      <tr>
-	        <td><%=item.getTipo()%></td>
-	        <td><%=item.isVegana()%></td>
+	        <td>Nome</td>
+	        <td>Universidade></td>
 	      </tr>
-	      <%} %>
 	    </tbody>
 	  </table>
 	</div>

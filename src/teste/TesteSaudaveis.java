@@ -1,5 +1,6 @@
 package teste;
 
+import dao.SaudaveisDao;
 import negocio.Saudaveis;
 
 public class TesteSaudaveis {
@@ -10,7 +11,14 @@ public class TesteSaudaveis {
 		saudaveis.setServe(1);
 		saudaveis.setVegana(false);
 		saudaveis.setVegetariana(true);
+		
+		SaudaveisDao.incluir(saudaveis);
+		
 		saudaveis.show();
+		
+		for (Saudaveis s : SaudaveisDao.obterLista()) {
+			s.show();
+		}	
 	}
 
 }

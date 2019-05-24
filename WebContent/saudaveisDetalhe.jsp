@@ -7,7 +7,7 @@
 <title>Cadastro de Saudáveis</title>
 </head>
 <body>
-<form action="" method="post">
+	<form action="SaudaveisController" method="post">
 	
 		<hr>
 		
