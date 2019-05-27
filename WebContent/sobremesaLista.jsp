@@ -9,6 +9,11 @@
 <title> Sobremesa </title>
 </head>
 <body>
+
+	<%
+	List<Sobremesa> lista = (List<Sobremesa>)request.getAttribute("lista");
+	%>
+
 	<form action="AppController" method="get">
 		<div style="height: 75px;">
 				<h3>Sobremesa</h3>
@@ -24,11 +29,12 @@
 	      </tr>
 	    </thead>
 	    <tbody>
-	    
+	     <% for(Sobremesa item : lista){ %>
 	      <tr>
-	        <td>Nome></td>
-	        <td>universidade</td>
+	         <td><%=item.getNomeReceita()%></td>
+	         <td><%=item.getTempoMinutos()%></td>
 	      </tr>
+	      <%} %>
 	    </tbody>
 	  </table>
 	</div>

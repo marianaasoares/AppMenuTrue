@@ -39,7 +39,7 @@ public class AppController extends HttpServlet {
 
 	private List<?> obterLista(){
 		switch (tela) {
-		case "ChefLista.jsp":
+		case "chefLista.jsp":
 			return ChefDao.obterLista();
 			
 		case "MassaLista.jsp":

@@ -21,6 +21,8 @@ public class ChefController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		request.setAttribute("lista", ChefDao.obterLista());
+		request.getRequestDispatcher("chefLista.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,7 +37,7 @@ public class ChefController extends HttpServlet {
 		
 		request.setAttribute("titulo", "Chef");
 		request.setAttribute("mensagem", chef.toString());
-		
+		request.getRequestDispatcher("finaliza.jsp").forward(request, response);
 	}
 
 }

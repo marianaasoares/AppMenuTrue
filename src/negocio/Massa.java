@@ -8,6 +8,7 @@ public class Massa extends Segmento{
 	private boolean massaFresca;
 	private int qtdeMassa;
 	
+
 	
 	@Override
 	public String toString() {

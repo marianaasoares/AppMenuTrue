@@ -11,6 +11,9 @@
 </head>
 <body>
 
+	<%
+	List<Chef> lista = (List<Chef>)request.getAttribute("lista");
+	%>
 	
 	<form action="AppController" method="get">
 		<div style="height: 75px;">
@@ -25,14 +28,16 @@
 	    <thead>
 	      <tr>
 	        <th>Nome</th>
-	        <th>Universidade</th>
+	        <th>Usuario</th>
 	      </tr>
 	    </thead>
 	    <tbody>
+	    <% for(Chef item : lista){ %>
 	      <tr>
-	        <td>nome</td>
-	        <td>universidade</td>
+	        <td><%=item.getNome()%></td>
+	        <td><%=item.getUsuario()%></td>
 	      </tr>
+	       <%} %>
 	    </tbody>
 	  </table>
 	</div>

@@ -1,10 +1,14 @@
 package controle;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dao.SobremesaDao;
+import negocio.Sobremesa;
 
 public class SobremesaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -19,7 +23,17 @@ public class SobremesaController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		doGet(request, response);
+		Sobremesa sobremesa = new Sobremesa(request.getParameter("nomeReceita"), Integer.valueOf(request.getParameter("tempoMinutos")));
+		
+		sobremesa.setTemChocolate(Boolean.parseBoolean(request.getParameter("temChocolate")));
+		sobremesa.setGelado(Boolean.parseBoolean(request.getParameter("gelado")));
+		sobremesa.setQtdeServe(Integer.valueOf(request.getParameter("qtdeServe")));
+
+		SobremesaDao.incluir(sobremesa);
+		
+		request.setAttribute("titulo", "Sobremesa");
+		request.setAttribute("mensagem", sobremesa.toString());
+		
 	}
 
 }

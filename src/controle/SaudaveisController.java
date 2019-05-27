@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.SaudaveisDao;
+import negocio.Saudaveis;
+
 public class SaudaveisController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -20,7 +23,18 @@ public class SaudaveisController extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		Saudaveis s = new Saudaveis(request.getParameter("nomeReceita"), Integer.valueOf(request.getParameter("tempoMinutos")));
+		
+		s.setVegetariana(Boolean.parseBoolean(request.getParameter("vegetariana")));
+		s.setVegana(Boolean.parseBoolean(request.getParameter("vegana")));
+		s.setTipo(request.getParameter("tipo"));
+		s.setServe(Integer.valueOf(request.getParameter("serve")));
+		
+		SaudaveisDao.incluir(s);
+		
+		request.setAttribute("titulo", "Chef");
+		request.setAttribute("mensagem", s.toString());
+		
 	}
 
 }
