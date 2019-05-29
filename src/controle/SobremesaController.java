@@ -18,7 +18,8 @@ public class SobremesaController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setAttribute("lista", SobremesaDao.obterLista());
+		request.getRequestDispatcher("sobremesaLista.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,7 +34,7 @@ public class SobremesaController extends HttpServlet {
 		
 		request.setAttribute("titulo", "Sobremesa");
 		request.setAttribute("mensagem", sobremesa.toString());
-		
+		request.getRequestDispatcher("finaliza.jsp").forward(request, response);
 	}
 
 }

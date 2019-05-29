@@ -20,7 +20,8 @@ public class MassaController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setAttribute("lista", MassaDao.obterLista());
+		request.getRequestDispatcher("massaLista.jsp").forward(request, response);
 	}
 
 	
@@ -34,6 +35,7 @@ public class MassaController extends HttpServlet {
 		
 		request.setAttribute("titulo", "Massa");
 		request.setAttribute("mensagem", massa.toString());
+		request.getRequestDispatcher("finaliza.jsp").forward(request, response);
 	}
 
 }
