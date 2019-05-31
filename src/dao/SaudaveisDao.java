@@ -14,7 +14,7 @@ public class SaudaveisDao {
 		
 		List<Saudaveis> lista = new ArrayList<Saudaveis>();
 		
-		String sql = "SELECT * FROM tsaudaveis";
+		String sql = "SELECT * FROM tsaudaveis ORDER BY nomeReceita";
 		
 		try {
 			PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
@@ -47,7 +47,7 @@ public class SaudaveisDao {
 		try {
 			PreparedStatement ps = 
 					Conexao.obterConexao().prepareStatement(
-							"INSERT INTO tsaudaveis "
+							"INSERT INTO tsaudaveis"
 							+ "(id, nomeReceita, tempoMinutos, vegetariana, vegana, tipo, serve)"
 							+ "VALUES "
 							+ "(?,?,?,?,?,?,?)"

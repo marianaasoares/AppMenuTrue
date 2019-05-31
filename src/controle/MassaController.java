@@ -20,13 +20,16 @@ public class MassaController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		request.setAttribute("lista", MassaDao.obterLista());
 		request.getRequestDispatcher("massaLista.jsp").forward(request, response);
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Massa massa = new Massa(request.getParameter("nomeReceita"), Integer.valueOf(request.getParameter("tempoMinutos")));
+		Massa massa = new Massa(request.getParameter("nomeReceita"), 
+				Integer.valueOf(request.getParameter("tempoMinutos")));
+		
 		massa.setTipo(request.getParameter("tipo"));
 		massa.setMassaFresca(Boolean.parseBoolean(request.getParameter("massaFresca")));
 		massa.setQtdeMassa(Integer.parseInt(request.getParameter("qtdeMassa")));
@@ -35,6 +38,7 @@ public class MassaController extends HttpServlet {
 		
 		request.setAttribute("titulo", "Massa");
 		request.setAttribute("mensagem", massa.toString());
+		request.setAttribute("controller", "MassaController");
 		request.getRequestDispatcher("finaliza.jsp").forward(request, response);
 	}
 

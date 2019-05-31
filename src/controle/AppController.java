@@ -42,13 +42,13 @@ public class AppController extends HttpServlet {
 		case "chefLista.jsp":
 			return ChefDao.obterLista();
 			
-		case "MassaLista.jsp":
+		case "massaLista.jsp":
 			return MassaDao.obterLista();
 			
-		case "SaudaveisLista.jsp":
+		case "saudaveisLista.jsp":
 			return SaudaveisDao.obterLista();
 			
-		case "SobremesaLista.jsp":
+		case "sobremesaLista.jsp":
 			return SobremesaDao.obterLista();
 			
 		}

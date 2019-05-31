@@ -7,12 +7,15 @@
 <title>Massa</title>
 </head>
 <body>
-<form action="" method="post">
+	<form action="MassaController" method="post">
 	
 		<hr>
 		
 		<h3>Nome da receita</h3>
-		<input type="text" name="nome">
+		<input type="text" name="nomeReceita">
+	
+		<h3>Tempo de preparo</h3>
+		<input type="text" name="tempoMinutos">
 	
 		<h3>Tipo de massa</h3>
 		<input type="text" name="tipo">
@@ -22,12 +25,9 @@
 		<input type="radio" name="massa" value="Não Massa Fresca"> Não Massa Fresca
 	
 		<h3>Quantidade de massa</h3>
-		<input type="text" name="quantidade">
+		<input type="text" name="qtdeMassa">
 		
-		<h3>Tempo de preparo</h3>
-		<input type="text" name="tempo">
 
-		
 		<input type="submit" value="Cadastrar">
 </form>
 </body>

@@ -12,24 +12,24 @@
 		<hr>
 		
 		<h3>Nome da receita</h3>
-		<input type="text" name="nome">
+		<input type="text" name="nomeReceita">
 	
 		<h3>Tempo de preparo</h3>
-		<input type="text" name="tempo">
+		<input type="text" name="tempoMinutos">
 		
-		<h3>Segmento</h3>
-		<input type="text" name="segmento">
+		<h3> Tipo </h3>
+		<input type="text" name="tipo">
 		
 		<h3>Vegetariana</h3>
-		<input type="radio" name="Vegetariana" value="Vegetariana"> Vegetariana
-		<input type="radio" name="Vegetariana" value="Não Vegetariana"> Não Vegetariana
+		<input type="radio" name="vegetariana" value="Vegetariana"> Vegetariana
+		<input type="radio" name="vegetariana" value="Não Vegetariana"> Não Vegetariana
 	
 		<h3>Vegana</h3>
-		<input type="radio" name="Vegana" value="Vegana"> Vegana
-		<input type="radio" name="Vegana" value="Não Vegana"> Não Vegana
+		<input type="radio" name="vegana" value="Vegana"> Vegana
+		<input type="radio" name="vegana" value="Não Vegana"> Não Vegana
 		
 		<h3>Serve</h3>
-		<input type="text" name="quantidade">
+		<input type="text" name="serve">
 		
 
 		<input type="submit" value="Cadastrar">

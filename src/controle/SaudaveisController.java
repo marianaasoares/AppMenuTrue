@@ -19,6 +19,7 @@ public class SaudaveisController extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		request.setAttribute("lista", SaudaveisDao.obterLista());
 		request.getRequestDispatcher("saudaveisLista.jsp").forward(request, response);
 	}
@@ -35,6 +36,7 @@ public class SaudaveisController extends HttpServlet {
 		
 		request.setAttribute("titulo", "Chef");
 		request.setAttribute("mensagem", s.toString());
+		request.setAttribute("controller", "SaudaveisController");
 		request.getRequestDispatcher("finaliza.jsp").forward(request, response);
 	}
 

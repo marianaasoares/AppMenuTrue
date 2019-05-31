@@ -17,12 +17,18 @@
 <body>
 
 	<%
-	String meuTitulo= (String)request.getAttribute("titulo");
+	String titulo= (String)request.getAttribute("titulo");
 	String mensagem = (String)request.getAttribute("mensagem");
+	String controller = (String)request.getAttribute("controller");
 	%>
 
+	<form action="<%=controller%>">
+				<button type="submit" class="btn btn-danger navbar-btn">Voltar</button>
+			</form>
+	
+
 	<div class="container">
-  		<h2><%=meuTitulo %></h2>
+  		<h2><%=titulo %></h2>
   		<div class="alert alert-success">
     		<strong>Successo!</strong> <%=mensagem%>.
   		</div>

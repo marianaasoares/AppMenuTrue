@@ -37,6 +37,7 @@ public class ChefController extends HttpServlet {
 		
 		request.setAttribute("titulo", "Chef");
 		request.setAttribute("mensagem", chef.toString());
+		request.setAttribute("controller", "ChefController");
 		request.getRequestDispatcher("finaliza.jsp").forward(request, response);
 	}
 

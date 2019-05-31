@@ -14,7 +14,7 @@ public static List<Massa> obterLista(){
 		
 		List<Massa> lista = new ArrayList<Massa>();
 		
-		String sql = "SELECT * FROM tmassa";
+		String sql = "SELECT * FROM tmassa ORDER BY nomeReceita";
 		
 		try {
 			PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
@@ -46,18 +46,17 @@ public static List<Massa> obterLista(){
 		try {
 			PreparedStatement ps = 
 					Conexao.obterConexao().prepareStatement(
-							"INSERT INTO tmassaf "
-							+ "(id, nomeReceita, tempoMinuto, tipo, massaFresca, qtdeMassa)"
+							"INSERT INTO tmassa"
+							+ "(nomeReceita, tempoMinutos, tipo, massaFresca, qtdeMassa)"
 							+ "VALUES "
-							+ "(?,?,?,?,?,?)"
+							+ "(?,?,?,?,?)"
 						);
 	
-			ps.setInt(1, massa.getId());
-			ps.setString(2, massa.getNomeReceita());
-			ps.setInt(3, massa.getTempoMinutos());
-			ps.setString(4, massa.getTipo());
-			ps.setBoolean(5, massa.getMassaFresca());
-			ps.setInt(6, massa.getQtdeMassa());
+			ps.setString(1, massa.getNomeReceita());
+			ps.setInt(2, massa.getTempoMinutos());
+			ps.setString(3, massa.getTipo());
+			ps.setBoolean(4, massa.getMassaFresca());
+			ps.setInt(5, massa.getQtdeMassa());
 			
 			ps.execute();
 			

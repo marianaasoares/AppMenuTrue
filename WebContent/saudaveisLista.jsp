@@ -15,11 +15,9 @@
 	List<Saudaveis> lista = (List<Saudaveis>)request.getAttribute("lista");
 	%>
 
-	<form action="AppController" method="get">
+	<form action="saudaveisDetalhe.jsp">
 		<div style="height: 75px;">
 				<h3>Saudaveis</h3>
-				<input type="hidden" name="tela" value="Saudaveis">
-				<input type="submit" value="Cadastrar">
 		</div>
 		<div class="container">            
 	  <table class="table">
@@ -39,6 +37,7 @@
 	    </tbody>
 	  </table>
 	</div>
+	<input type="submit" value="Cadastrar">
 	</form>
 </body>
 </html>

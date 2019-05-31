@@ -18,29 +18,34 @@
 	</style>
 </head>
 <body>
-	<style>
-		
-	  
-	</style>
-	<form action="AppController" method="post">
 	
+	<form action="AppController" method="post"> 	</form>
+	
+	<form action="MassaController">
 		<div style="height: 75px;">
 			<h3>Massa</h3>
-				<input type="submit" name="tela" value="Massa">
+				<button type="submit"> Massa </button>
 		</div>
+	</form>	
 		
+	<form action="SobremesaController">	
 		<div style="height: 75px;">		
 			<h3>Sobremesa</h3>
-				<input type="submit" name="tela" value="Sobremesa">
+				<button type="submit"> Sobremesa </button>
 		</div>
-		
+	</form>	
+	
+	<form action="SaudaveisController">
 		<div style="height: 75px;">
 			<h3>Saudaveis</h3>
-				<input type="submit" name="tela" value="Saudaveis">
+				<button type="submit"> Saudaveis </button>
 		</div>
+	</form>
+	
+	<form action="ChefController">
 		<div style="height: 75px;">
 			<h3>Chef</h3>
-				<input type="submit" name="tela" value="Chef">
+				<button type="submit"> Chef </button>
 		</div>
 	</form>
 </body>

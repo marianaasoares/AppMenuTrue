@@ -15,7 +15,7 @@ public class SobremesaDao {
 		
 		List<Sobremesa> lista = new ArrayList<Sobremesa>();
 		
-		String sql = "SELECT * FROM tsobremesa";
+		String sql = "SELECT * FROM tsobremesa ORDER BY nomeReceita";
 		
 		try {
 			PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
@@ -48,17 +48,16 @@ public class SobremesaDao {
 		try {
 			PreparedStatement ps = 
 					Conexao.obterConexao().prepareStatement(
-							"INSERT INTO tsaudaveis "
-							+ "(id, nomeReceita, tempoMinutos, temChocolate, serve, gelado)"
+							"INSERT INTO tsobremesa"
+							+ "(nomeReceita, tempoMinutos, temChocolate, serve, gelado)"
 							+ "VALUES "
-							+ "(?,?,?,?,?,?)"
+							+ "(?,?,?,?,?)"
 						);
 	
-			ps.setInt(1, sobremesa.getId());
-			ps.setString(2, sobremesa.getNomeReceita());
-			ps.setInt(3, sobremesa.getTempoMinutos());
-			ps.setBoolean(4, sobremesa.getTemChocolate());
-			ps.setInt(7, sobremesa.getQtdeServe());
+			ps.setString(1, sobremesa.getNomeReceita());
+			ps.setInt(2, sobremesa.getTempoMinutos());
+			ps.setBoolean(3, sobremesa.getTemChocolate());
+			ps.setInt(4, sobremesa.getQtdeServe());
 			ps.setBoolean(5, sobremesa.getGelado());
 			
 			

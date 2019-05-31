@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title> Cadastro de Estudante</title>
+<title> Cadastro de Chef</title>
 </head>
 <body>
 
@@ -15,12 +15,9 @@
 	List<Chef> lista = (List<Chef>)request.getAttribute("lista");
 	%>
 	
-	<form action="AppController" method="get">
+	<form action="chefDetalhe.jsp">
 		<div style="height: 75px;">
 				<h3>Chef</h3>
-				<input type="hidden" name="tela" value="Chef">
-				
-				<input type="submit" value="Cadastrar">
 		</div>
 			
 	<div class="container">            
@@ -41,6 +38,7 @@
 	    </tbody>
 	  </table>
 	</div>
+	<input type="submit" value="Cadastrar">
 	</form>
 
 </body>

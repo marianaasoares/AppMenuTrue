@@ -14,11 +14,9 @@
 	List<Massa> lista = (List<Massa>)request.getAttribute("lista");
 	%>
 	
-	<form action="AppController" method="get">
+	<form action="massaDetalhe.jsp">
 		<div style="height: 75px;">
 				<h3>Detalhes de Massa</h3>
-				<input type="hidden" name="tela" value="Massa">
-				<input type="submit" value="Cadastrar">
 		</div>
 		<div class="container">            
 	  <table class="table">
@@ -38,6 +36,7 @@
 	    </tbody>
 	  </table>
 	</div>
+	<input type="submit" value="Cadastrar">
 	</form>
 </body>
 </html>

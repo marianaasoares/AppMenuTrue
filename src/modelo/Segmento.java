@@ -5,9 +5,6 @@ public abstract class Segmento {
 	private int id; 
 	private String nomeReceita;
 	private int tempoMinutos;
-	private int qtdeReceitas;
-	private String contato;
-	private int qtdeUsuarios;
 	protected static int qtdeSegmentos;
 	
 	public Segmento(int id) {
@@ -27,12 +24,9 @@ public abstract class Segmento {
 	
 	@Override
 	public String toString() {
-		return String.format("%s - %d - %d - %d - %s", 
+		return String.format("%s - %d", 
 				this.nomeReceita,
-				this.tempoMinutos,
-				this.qtdeReceitas,
-				this.qtdeUsuarios,
-				this.contato
+				this.tempoMinutos
 				);
 	}
 	
@@ -53,30 +47,6 @@ public abstract class Segmento {
 
 	public void setTempoMinutos(int tempoMinutos) {
 		this.tempoMinutos = tempoMinutos;
-	}
-
-	public int getQtdeReceitas() {
-		return qtdeReceitas;
-	}
-
-	public void setQtdeReceitas(int qtdeReceitas) {
-		this.qtdeReceitas = qtdeReceitas;
-	}
-
-	public String getContato() {
-		return contato;
-	}
-
-	public void setContato(String contato) {
-		this.contato = contato;
-	}
-
-	public int getQtdeUsuarios() {
-		return qtdeUsuarios;
-	}
-
-	public void setQtdeUsuarios(int qtdeUsuarios) {
-		this.qtdeUsuarios = qtdeUsuarios;
 	}
 
 	public static int obterQtdedeSegmento() {

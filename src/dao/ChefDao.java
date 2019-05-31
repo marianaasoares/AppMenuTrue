@@ -16,7 +16,7 @@ import negocio.Chef;
 		
 		List<Chef> lista = new ArrayList<Chef>();
 		
-		String sql = "SELECT * FROM tchef";
+		String sql = "SELECT * FROM tchef ORDER BY nome";
 		
 		try {
 			PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
