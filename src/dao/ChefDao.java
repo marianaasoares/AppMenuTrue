@@ -12,7 +12,7 @@ import negocio.Chef;
 
 	public class ChefDao {
 		
-		public static List<Chef> obterLista(){
+	public static List<Chef> obterLista(){
 		
 		List<Chef> lista = new ArrayList<Chef>();
 		
@@ -70,6 +70,22 @@ import negocio.Chef;
 		return false;
 	
 		}
-}
+
+	public static boolean excluir(int id){
+		try {
+		PreparedStatement ps = 
+		Conexao.obterConexao().prepareStatement(
+				"DELETE FROM TGame WHERE id = ?");
+			ps.setInt(1, id);
+			ps.execute();			
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}			
+		return false;
+	}
+
+	
+	}
 
 

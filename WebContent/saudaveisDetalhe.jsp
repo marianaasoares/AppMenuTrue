@@ -5,6 +5,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Cadastro de Saudáveis</title>
+<link href="./index.css" type="text/css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
 	<form action="SaudaveisController" method="post">

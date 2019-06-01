@@ -8,6 +8,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title> Saudaveis </title>
+<link href="./index.css" type="text/css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
 

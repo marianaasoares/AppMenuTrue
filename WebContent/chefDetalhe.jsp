@@ -5,6 +5,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Chef Detalhe</title>
+<link href="./index.css" type="text/css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
 	<form action="ChefController" method="post">
@@ -21,8 +23,8 @@
 		<input type="text" name="email">
 		
 		<h3>Amador</h3>
-		<input type="radio" name="Amador(a)" value="Amador(a)"> Amador(a)
-		<input type="radio" name="Amador(a)" value="Profissional"> Profissional
+		<input type="radio" name="amador" value="Amador(a)"> Amador(a)
+		<input type="radio" name="amador" value="Profissional"> Profissional
 
 		
 

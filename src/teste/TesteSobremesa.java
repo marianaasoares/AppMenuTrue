@@ -19,5 +19,12 @@ public class TesteSobremesa {
 		for (Sobremesa s : SobremesaDao.obterLista()) {
 			s.show();
 		}	
+		
+		if(SobremesaDao.excluir(1)) {
+			System.out.println("Exclusão com sucesso!");
+		} else {
+			System.err.println("Erro na inclusão!");
+		}
+
 	}
 }

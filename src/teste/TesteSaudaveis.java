@@ -19,6 +19,13 @@ public class TesteSaudaveis {
 		for (Saudaveis s : SaudaveisDao.obterLista()) {
 			s.show();
 		}	
+		
+		if(SaudaveisDao.excluir(1)) {
+			System.out.println("Exclusão com sucesso!");
+		} else {
+			System.err.println("Erro na inclusão!");
+		}
+
 	}
 
 }

@@ -10,7 +10,7 @@ import conexao.Conexao;
 import negocio.Massa;
 
 public class MassaDao {
-public static List<Massa> obterLista(){
+	public static List<Massa> obterLista(){
 		
 		List<Massa> lista = new ArrayList<Massa>();
 		
@@ -69,4 +69,20 @@ public static List<Massa> obterLista(){
 		return false;
 	
 		}
+
+	public static boolean excluir(int id){
+		try {
+		PreparedStatement ps = 
+		Conexao.obterConexao().prepareStatement(
+				"DELETE FROM TGame WHERE id = ?");
+			ps.setInt(1, id);
+			ps.execute();			
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}			
+		return false;
+	}
+
+
 }

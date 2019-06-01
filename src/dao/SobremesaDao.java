@@ -43,7 +43,6 @@ public class SobremesaDao {
 		return lista;
 	}
 	
-	
 	public static boolean incluir(Sobremesa sobremesa){
 		try {
 			PreparedStatement ps = 
@@ -72,4 +71,19 @@ public class SobremesaDao {
 		return false;
 	
 		}
+
+	public static boolean excluir(int id){
+		try {
+		PreparedStatement ps = 
+		Conexao.obterConexao().prepareStatement(
+				"DELETE FROM TGame WHERE id = ?");
+			ps.setInt(1, id);
+			ps.execute();			
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}			
+		return false;
+	}
+
 }

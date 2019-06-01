@@ -15,7 +15,14 @@ public class TesteChef {
 		
 		for (Chef p : ChefDao.obterLista()) {
 			p.show();
-		}	
+		}
+		
+		if(ChefDao.excluir(1)) {
+			System.out.println("Exclusão com sucesso!");
+		} else {
+			System.err.println("Erro na inclusão!");
+		}
+
 	}
 
 }

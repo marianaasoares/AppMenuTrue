@@ -20,6 +20,13 @@ public class TesteMassa {
 			m.show();
 		}	
 
+		if(MassaDao.excluir(1)) {
+			System.out.println("Exclusão com sucesso!");
+		} else {
+			System.err.println("Erro na inclusão!");
+		}
+
+		
 	}
 
 }

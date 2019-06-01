@@ -1,52 +1,44 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="../WebContent/style.css" rel="stylesheet" type="text/css">
-	<meta charset="ISO-8859-1">
-	
-	<title>Menu Main</title>
-	
-	<style>
-		input[type = submit] {
-		     width: 150px;
-		     height: 30px;
-		}
-		
-	</style>
+<meta charset="ISO-8859-1">
+<title>Menu Main</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link href="./index.css" type="text/css" rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+	rel="stylesheet">
 </head>
 <body>
-	
-	<form action="AppController" method="post"> 	</form>
-	
-	<form action="MassaController">
-		<div style="height: 75px;">
-			<h3>Massa</h3>
-				<button type="submit"> Massa </button>
-		</div>
-	</form>	
-		
-	<form action="SobremesaController">	
-		<div style="height: 75px;">		
-			<h3>Sobremesa</h3>
-				<button type="submit"> Sobremesa </button>
-		</div>
-	</form>	
-	
-	<form action="SaudaveisController">
-		<div style="height: 75px;">
-			<h3>Saudaveis</h3>
-				<button type="submit"> Saudaveis </button>
-		</div>
-	</form>
-	
-	<form action="ChefController">
-		<div style="height: 75px;">
-			<h3>Chef</h3>
-				<button type="submit"> Chef </button>
-		</div>
-	</form>
+
+	<form action="AppController" method="post"></form>
+	<img alt="AppMariana"
+		src="C:\Users\mariana_dsantos\Downloads\icon_appmariana.png">
+	<h3 id="main_title">Selecione um segmento:</h3>
+
+	<div id="segmentos">
+		<form action="MassaController">
+			<button type="submit" class="btn btn-secondary btn-lg btn-block">Massa</button>
+		</form>
+
+		<form action="SobremesaController">
+			<button type="submit" class="btn btn-secondary btn-lg btn-block">Sobremesa</button>
+		</form>
+
+		<form action="SaudaveisController">
+			<button type="submit" class="btn btn-secondary btn-lg btn-block">Saudaveis</button>
+		</form>
+
+		<form action="ChefController">
+			<button type="submit" class="btn btn-secondary btn-lg btn-block">Chef</button>
+		</form>
+	</div>
 </body>
 </html>

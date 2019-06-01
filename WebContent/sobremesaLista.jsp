@@ -7,6 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title> Sobremesa </title>
+<link href="./index.css" type="text/css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,13 +18,13 @@
 
 	<form action="sobremesaDetalhe.jsp">
 		<div style="height: 75px;">
-				<h3>Sobremesa</h3>
+			<h3>Sobremesa</h3>
 		</div>
 		<div class="container">            
 	  <table class="table">
 	    <thead>
 	      <tr>
-	        <th>Nome</th>
+	        <th>Nome da receita</th>
 	        <th>Tempo de preparo (em minutos)</th>
 	      </tr>
 	    </thead>
@@ -32,7 +34,7 @@
 	         <td><%=item.getNomeReceita()%></td>
 	         <td><%=item.getTempoMinutos()%></td>
 	      </tr>
-	      <%} %>
+	      <%}%>
 	    </tbody>
 	  </table>
 	</div>
