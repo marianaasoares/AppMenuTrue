@@ -23,18 +23,19 @@
 	String mensagem = (String)request.getAttribute("mensagem");
 	String controller = (String)request.getAttribute("controller");
 	%>
-
-	<form action="<%=controller%>">
-				<button type="submit" class="btn btn-danger navbar-btn">Voltar</button>
-			</form>
 	
+	<img alt="AppMariana"
+			src="C:\Users\mariana_dsantos\Downloads\icon_appmariana.png">
 
 	<div class="container">
-  		<h2><%=titulo %></h2>
+  		<h2 id="sucesso"><%=titulo %> cadastrada com sucesso!</h2>
   		<div class="alert alert-success">
-    		<strong>Successo!</strong> <%=mensagem%>.
+    		 <%=mensagem%><strong> Foi cadastrato com sucesso no nosso banco de dados!</strong>
   		</div>
   	</div>
   	
+  	<form action="<%=controller%>">
+				<button type="submit" class="btn btn-danger navbar-btn">Voltar</button>
+			</form>
 </body>
 </html>

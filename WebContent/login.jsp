@@ -34,7 +34,7 @@
 	<%if(invalido){%>
 	<div class="container">
 		<div class="alert alert-danger">
-			<strong>Problema!</strong> Usuário não encontrado!!!
+			<strong>Problema!</strong> Usuário não encontrado, tente novamente!
 		</div>
 	</div>
 	<%}%>
